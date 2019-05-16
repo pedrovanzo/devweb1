@@ -1,0 +1,12 @@
+1 - Armazenar num vetor todas as cores possiveis - html5;
+
+2 - Armazenar um subvetor com 10 cores aleatórias do vetor inicial;
+Sem cores repetidas;
+
+3 - Escolher uma cor aleatoria para o computador;
+
+4 - Perguntar o palpite do usuario;
+
+5 - Caso o usuario acerte, exibir mensagem e número de palpites. Mudar a cor da pagina html para a cor escolhida;
+
+6 - Se o usuario errar, perguntar novamente;

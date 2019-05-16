@@ -1,0 +1,27 @@
+#vetor vazio
+let cores = []
+
+#preenche o vetor com 147 cores
+for(let i=2;i<=149;i++){
+    cores.push(document.querySelector("#main > div.w3-responsive > table > tbody > tr:nth-child("+ (i+2) + ") > td:nth-child(1) > a").innerText.toLowerCase())
+}
+
+#cria um vetor menor com 10 cores do vetor maior
+for(let j=0;j<10;j++){
+    corJogo.push(cores[Math.floor(Math.random() * 148)])
+}
+
+
+
+js template string
+
+JSON.stringfy(cores)
+
+
+let numAleatorio = Math.floor(Math.random() * 148);
+
+for(let i=0;i<10;i++){
+	numero = Math.floor(Math.random()*(148-i))
+	#tirar a cor do vetor
+	cores.splice(i, 1)
+}
