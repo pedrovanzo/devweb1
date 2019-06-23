@@ -1,15 +1,19 @@
 {
-    "title": "EVF Stock Value",
-    "january": 40,
-    "february": 21,
-    "march": 97,
-    "april": 38,
-    "may": 42,
-    "june": 41,
-    "july": 30,
-    "august": 61,
-    "september": 79,
-    "october": 88,
-    "november": 67,
-    "december": 64
+    [
+        {
+            "title": "EVF Stock Value",
+            "january": 40,
+            "february": 21,
+            "march": 97,
+            "april": 38,
+            "may": 42,
+            "june": 41,
+            "july": 30,
+            "august": 61,
+            "september": 79,
+            "october": 88,
+            "november": 67,
+            "december": 64
+        }
+    ]
 }
