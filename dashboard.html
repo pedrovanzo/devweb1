@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Eletric Vehicle Factory</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">
+            <img src="img/logo.png" alt="" class="logo">
+        </a>
+        <div class="nav-buttons">
+            <a href="models.html">Models</a>
+            <a href="acessories.html">Acessories</a>
+            <a href="dashboard.html" class="navDash">
+                <img src="img/chart.png" alt="">
+            </a>
+            <a href="careers.html">Careers</a>
+            <a href="about.html">About EVF</a>
+        </div>
+    </nav>
+    <div class="body">
+        <div class="left-column"></div>
+        <div class="center-column">
+            <div class="dashCanvas">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+        <div class="right-column"></div>
+    </div>
+    <footer class="footer">
+        <div>OneManBand &copy; 2019</div>
+        <div>
+            <a href="#">Partners</a>&nbsp;&nbsp;
+            <a href="#">Privacy</a>&nbsp;&nbsp;
+            <a href="#">Legal</a>&nbsp;&nbsp;
+            <a href="#">Careers</a>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="img/twitter.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/lkdin.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/yt.png" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="ombFooter">
+            <img src="img/onemanband.png" alt="">
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <script src="dw.json"></script>
+    <script>
+        let dataJson = "";
+        fetch('https://pedrovanzo.github.io/devweb1/dw.json')
+            .then(
+                function (response) {
+                    if (response.status !== 200) {
+                        console.log('Looks like there was a problem. Status Code: ' +
+                            response.status);
+                        return;
+                    }
+                    // Examine the text in the response
+                    response.json().then(function (data) {
+                        dataJson = data;
+                        // console.log(data);
+                        // console.log(dataJson);
+                        function rValue() {
+                            let rNumber = Math.floor(Math.random() * 100);
+                            return rNumber;
+                        }
+                        // console.log(rValue());
+                        var ctx = document.getElementById('myChart').getContext('2d');
+                        var chart = new Chart(ctx, {
+                            // The type of chart we want to create
+                            type: 'bar',
+                            data: {
+                                labels: ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'],
+                                datasets: [{
+                                    label: 'EVF Stock Value',
+                                    backgroundColor: 'rgb(255, 99, 132)',
+                                    data:[33, 13, 53, 20, 100, 33, 13, 53, 20, 100, 2, 11]
+                                }]
+                            },
+
+                            // The data for our dataset
+                            // data: dataJson,
+                            // data: {
+                            //     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                            //     datasets: [{
+                            //         label: 'My First dataset',
+                            //         backgroundColor: 'rgb(255, 99, 132)',
+                            //         borderColor: 'rgb(255, 99, 132)',
+                            //         data: [55, 14, 87, 7, 54, 91, 80, 14, 87, 7, 54, 91, 80]
+                            //     }]
+                            // },
+
+                            // Configuration options go here
+                            options: {}
+                        });
+
+                    });
+                }
+            )
+            .catch(function (err) {
+                console.log('Fetch Error :-S', err);
+            });
+        console.log(dataJson);
+    </script>
+</body>
+
+</html>
