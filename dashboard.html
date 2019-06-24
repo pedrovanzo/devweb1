@@ -63,63 +63,7 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
     <script src="dw.json"></script>
-    <script>
-        let dataJson = "";
-        fetch('https://pedrovanzo.github.io/devweb1/dw.json')
-            .then(
-                function (response) {
-                    if (response.status !== 200) {
-                        console.log('Looks like there was a problem. Status Code: ' +
-                            response.status);
-                        return;
-                    }
-                    // Examine the text in the response
-                    response.json().then(function (data) {
-                        dataJson = data;
-                        // console.log(data);
-                        // console.log(dataJson);
-                        function rValue() {
-                            let rNumber = Math.floor(Math.random() * 100);
-                            return rNumber;
-                        }
-                        // console.log(rValue());
-                        var ctx = document.getElementById('myChart').getContext('2d');
-                        var chart = new Chart(ctx, {
-                            // The type of chart we want to create
-                            type: 'bar',
-                            data: {
-                                labels: ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'],
-                                datasets: [{
-                                    label: 'EVF Stock Value',
-                                    backgroundColor: 'rgb(255, 99, 132)',
-                                    data:[33, 13, 53, 20, 100, 33, 13, 53, 20, 100, 2, 11]
-                                }]
-                            },
-
-                            // The data for our dataset
-                            // data: dataJson,
-                            // data: {
-                            //     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-                            //     datasets: [{
-                            //         label: 'My First dataset',
-                            //         backgroundColor: 'rgb(255, 99, 132)',
-                            //         borderColor: 'rgb(255, 99, 132)',
-                            //         data: [55, 14, 87, 7, 54, 91, 80, 14, 87, 7, 54, 91, 80]
-                            //     }]
-                            // },
-
-                            // Configuration options go here
-                            options: {}
-                        });
-
-                    });
-                }
-            )
-            .catch(function (err) {
-                console.log('Fetch Error :-S', err);
-            });
-        console.log(dataJson);
-    </script>
+    <script src="appJson.js"></script>
 </body>
 
 </html>
