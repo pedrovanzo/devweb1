@@ -58,6 +58,13 @@ nav .nav-buttons a{
 nav .nav-buttons a:hover{
     color: rgb(53, 69, 216);
 }
+nav .navDash{
+    width: 5%;
+    min-width: 70px;
+}
+nav .navDash img{
+    width: 100%;
+}
 .body{
     display: flex;
     padding: 20px 0;
@@ -346,6 +353,15 @@ nav .nav-buttons a:hover{
         flex-shrink: 0;
         height: auto;
     }
+}
+.dashCanvas{
+    width: 40%;
+    /* display: flex; */
+    /* flex-basis: 40%; */
+    /* flex-grow: 0; */
+    /* flex-shrink: 1; */
+    /* flex-direction: column; */
+    /* color: red; */
 }
 @media(max-width: 425px){
     .left-column, .center-column, .right-column{
