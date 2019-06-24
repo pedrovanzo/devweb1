@@ -1,4 +1,4 @@
-{
+'{
     "title": "EVF Stock Value",
     "january": 40,
     "february": 21,
@@ -12,4 +12,4 @@
     "october": 88,
     "november": 67,
     "december": 64
-}
+}'
