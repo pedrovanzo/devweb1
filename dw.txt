@@ -1,8 +1,0 @@
-{
-    labels: ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'],
-    datasets: [{
-        label: 'EVF Stock Value',
-        backgroundColor: 'rgb(255, 99, 132)',
-        data:[33, 13, 53, 20, 100, 33, 13, 53, 20, 100, 2, 11]
-    }]
-}
