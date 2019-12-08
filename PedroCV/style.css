@@ -1,0 +1,22 @@
+.navbar{
+    border-bottom: 1px solid #ccc;
+}
+.noBorder{
+    border-bottom: 1px dashed #ccc;
+}
+.headline{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.3em;
+}
+.sub-headline-custom-1{
+    /* border-bottom: 1px dashed #ccc; */
+}
+.row{
+    /* border-bottom: 1px solid #ccc; */
+}
+.col-12{
+    margin: 8px 0 8px 0;
+}
+.clearLine{
+    border-bottom: 1px solid #ccc;
+}
