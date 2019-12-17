@@ -1,12 +1,22 @@
+body{
+    background-image: linear-gradient(rgba(217,217,217,1), rgba(255,0,0,0));
+}
 .navbar{
-    border-bottom: 1px solid #ccc;
+    border-bottom: 2px solid #0084ff;
 }
 .noBorder{
-    border-bottom: 1px dashed #ccc;
+    border-top: 1px dashed #ccc;
 }
 .headline{
     font-family: 'Ubuntu', sans-serif;
     font-size: 1.3em;
+    border-left: 1px solid #bbb;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 12px;
+    vertical-align: middle;
+    /* display: inline-flex; */
+
 }
 .sub-headline-custom-1{
     /* border-bottom: 1px dashed #ccc; */
@@ -19,4 +29,8 @@
 }
 .clearLine{
     border-bottom: 1px solid #ccc;
+}
+.imgM{
+    margin: 6px;
+    margin-bottom: 8px;
 }
